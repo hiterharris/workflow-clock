@@ -1,11 +1,13 @@
 import React from 'react';
 import Timer from './components/Timer';
+import NumberPicker from './components/NumberPicker';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+      <NumberPicker />
       <Timer />
     </div>
   );

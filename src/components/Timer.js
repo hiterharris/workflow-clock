@@ -67,7 +67,7 @@ const Timer = () => {
   }
 
   const showTime = () => {
-    if (isActive && (minutes > 0 || seconds > 0)) {
+    if (minutes > 0 || seconds > 0) {
       return <div className="time">{minutes}:{zero()}{seconds}</div>
     } else {
       return null
