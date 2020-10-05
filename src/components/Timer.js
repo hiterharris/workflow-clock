@@ -7,14 +7,14 @@ const Timer = () => {
   const [minutes, setMinutes] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [audio] = useState(new Audio(alert));
-  const [playing, setPlaying] = useState(false);
+  const [playing] = useState(false);
 
-  const togglePlay = () => setPlaying(!playing);
+  // const togglePlay = () => setPlaying(!playing);
 
   useEffect(() => {
       playing ? audio.play() : audio.pause();
     },
-    [playing]
+    [playing, audio]
   );
 
   const toggle = () => {
@@ -58,7 +58,7 @@ const Timer = () => {
         setIsActive(false);
     }
     return () => clearInterval(interval);
-  }, [isActive, minutes, seconds, reset]);
+  }, [isActive, minutes, seconds, audio]);
 
   const zero = () => {
     if (seconds < 10) {
