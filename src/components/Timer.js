@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './timer.css';
-import alert from '../assets/alert.wav';
+import alert from '../assets/sounds/alert.wav';
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
